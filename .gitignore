@@ -1,0 +1,19 @@
+# ---- Personal and company data: never commit these ----
+config.toml
+smartsheet_token.txt
+*.xlsx
+*.xls
+*.csv
+*.bak
+batches/
+backups/
+archive/
+
+# ...except the made-up sample data
+!sample/*.xlsx
+
+# ---- Python / editor ----
+__pycache__/
+*.pyc
+.vscode/
+.idea/

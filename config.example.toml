@@ -1,0 +1,24 @@
+# Copy this file to config.toml and fill it in. config.toml is git-ignored,
+# so your report ID and settings stay off GitHub.
+# Paths are relative to this folder.
+
+[smartsheet]
+# The ID of the Smartsheet report that holds the roster. In Smartsheet:
+# File > Properties, or the number in the report's URL.
+# report_id = 1234567890123456
+
+[files]
+tracker        = "Cohort_Tracker.xlsx"
+template       = "Call_center_batch_template.xlsx"
+batches_folder = "batches"
+
+[statuses]
+# Matching ignores capitalization. Order here is the order rows appear in the tracker.
+# A status not listed anywhere shows in yellow and is never labeled.
+ship_ready  = ["Ready To Ship"]
+pending     = ["Ready to start", "Pending Background check", "Pending offer stage", "Pushed Pending"]
+do_not_ship = ["Equipment Shipped", "Started", "Dropped", "Terminated", "Did Not Start"]
+
+[checks]
+# Warn before labeling if the tracker hasn't been refreshed for this many hours.
+stale_hours = 12
